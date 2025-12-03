@@ -4,12 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, frxpngimage;
+  Dialogs, ExtCtrls, frxpngimage, StdCtrls, ComCtrls;
+
 
 type
   TForm1 = class(TForm)
-    Imagem: TImage;
     Relogio: TTimer;
+    Imagem: TImage;
+    BarraCarregar: TProgressBar;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure RelogioTimer(Sender: TObject);
   private
     { Private declarations }
@@ -18,16 +22,21 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FSplash: TForm1;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.RelogioTimer(Sender: TObject);
-begin
-FSplash.Destroy;
-FMain.show;
-end;
+uses 
+  Main;
 
+procedure TForm1.RelogioTimer(Sender: TObject);
+
+if BarraCarregar.position=100 then
+begin
+  FSplash.Destroy;
+  FMain.Show;
+
+end;
 end.
