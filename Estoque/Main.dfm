@@ -1,4 +1,4 @@
-object Form2: TForm2
+object frmMain: TfrmMain
   Left = 409
   Top = 126
   Width = 928
