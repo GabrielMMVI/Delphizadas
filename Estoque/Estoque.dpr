@@ -2,14 +2,16 @@ program Estoque;
 
 uses
   Forms,
-  Splash in 'Splash.pas' {Form1},
-  Main in 'Main.pas' {Form2};
+  Splash in 'Splash.pas' {frmSplash},
+  Main in 'Main.pas' {frmMain},
+  Login in 'Login.pas' {frmLogin};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, FSplash);
-  Application.CreateForm(TForm2, FMain);
+  Application.CreateForm(TfrmSplash, frmSplash);
+  Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmLogin, frmLogin);
   Application.Run;
 end.
