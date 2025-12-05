@@ -33,10 +33,16 @@ uses
 
 procedure TForm1.RelogioTimer(Sender: TObject);
 
+begin
+BarraCarregar.position:=BarraCarregar.position+1;
+Label2.caption:=inttostr(BarraCarregar.position)+ '%';
 if BarraCarregar.position=100 then
 begin
   FSplash.Destroy;
   FMain.Show;
 
 end;
+end;
 end.
+
+
