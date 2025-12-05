@@ -8,7 +8,7 @@ uses
 
 
 type
-  TForm1 = class(TForm)
+  TfrmSplash = class(TForm)
     Relogio: TTimer;
     Imagem: TImage;
     BarraCarregar: TProgressBar;
@@ -22,24 +22,23 @@ type
   end;
 
 var
-  FSplash: TForm1;
+  frmSplash: TfrmSplash;
 
 implementation
 
 {$R *.dfm}
 
 uses 
-  Main;
+  Login;
 
-procedure TForm1.RelogioTimer(Sender: TObject);
+procedure TfrmSplash.RelogioTimer(Sender: TObject);
 
 begin
 BarraCarregar.position:=BarraCarregar.position+1;
 Label2.caption:=inttostr(BarraCarregar.position)+ '%';
 if BarraCarregar.position=100 then
 begin
-  FSplash.Destroy;
-  FMain.Show;
+  frmLogin.Show;
 
 end;
 end;
