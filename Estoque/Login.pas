@@ -1,0 +1,41 @@
+unit Login;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons;
+
+type
+  TfrmLogin = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Edit2: TEdit;
+    SpeedButton1: TSpeedButton;
+    procedure SpeedButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.dfm}
+uses
+  Main;
+
+procedure TfrmLogin.SpeedButton1Click(Sender: TObject);
+begin
+
+  if(Edit1.text='login') and (Edit2.text='senha') then
+frmMain.ShowModal
+  else
+messagebox(0,'Login ou senha errados', 'Tente novamente', 0)
+end;
+
+end.
