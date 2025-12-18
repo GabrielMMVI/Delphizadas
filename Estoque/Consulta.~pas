@@ -1,0 +1,32 @@
+unit Consulta;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Grids, DBGrids;
+
+type
+  TfConsulta = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    DBGrid1: TDBGrid;
+    btAdicionar: TButton;
+    btAlterar: TButton;
+    btExcluir: TButton;
+    btAtualizar: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fConsulta: TfConsulta;
+
+implementation
+
+{$R *.dfm}
+
+end.

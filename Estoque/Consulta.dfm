@@ -1,0 +1,139 @@
+object fConsulta: TfConsulta
+  Left = 227
+  Top = 45
+  Width = 1127
+  Height = 557
+  Caption = 'Consulta'
+  Color = 10930928
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 107
+    Top = 26
+    Width = 241
+    Height = 29
+    Caption = 'Consulta de produtos: '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 347
+    Top = 27
+    Width = 435
+    Height = 21
+    TabOrder = 0
+  end
+  object btBuscar: TButton
+    Left = 794
+    Top = 21
+    Width = 148
+    Height = 35
+    Caption = 'Buscar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = btBuscarClick
+  end
+  object DBGrid1: TDBGrid
+    Left = 6
+    Top = 71
+    Width = 912
+    Height = 425
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object btAdicionar: TButton
+    Left = 917
+    Top = 71
+    Width = 116
+    Height = 40
+    Caption = 'Adicionar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btAdicionarClick
+  end
+  object btAlterar: TButton
+    Left = 917
+    Top = 114
+    Width = 116
+    Height = 40
+    Caption = 'Alterar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btAlterarClick
+  end
+  object btExcluir: TButton
+    Left = 916
+    Top = 157
+    Width = 117
+    Height = 40
+    Caption = 'Excluir'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+    OnClick = btExcluirClick
+  end
+  object btImprimir: TButton
+    Left = 917
+    Top = 200
+    Width = 117
+    Height = 40
+    Caption = 'Imprimir'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    OnClick = btImprimirClick
+  end
+  object btFechar: TButton
+    Left = 917
+    Top = 244
+    Width = 117
+    Height = 40
+    Caption = 'Fechar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+    OnClick = btFecharClick
+  end
+end
