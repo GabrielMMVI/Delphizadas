@@ -11,7 +11,7 @@ type
     Label1: TLabel;
     Edit1: TEdit;
     Label2: TLabel;
-    Edit3: TEdit;
+    Edit2: TEdit;
     SpeedButton1: TSpeedButton;
     procedure SpeedButton1Click(Sender: TObject);
   private
@@ -39,8 +39,3 @@ messagebox(0,'Login ou senha errados', 'Tente novamente', 0)
 end;
 
 end.
-
-
-
-
-
