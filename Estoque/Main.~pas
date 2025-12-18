@@ -8,7 +8,7 @@ uses
   { Removi FSplash daqui se não for estritamente necessário na declaração da classe }
 
 type
-  TForm2 = class(TForm)
+  TfrmMain = class(TForm)
   private
     { Private declarations }
   public
@@ -16,7 +16,7 @@ type
   end;
 
 var
-  FMain: TForm2;
+  frmMain: TfrmMain;
 
 implementation
 
