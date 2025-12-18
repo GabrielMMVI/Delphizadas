@@ -1,0 +1,63 @@
+unit Adicionar;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Buttons, Mask, StdCtrls;
+
+type
+  TfAdicionar = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    edtCod: TEdit;
+    edtProd: TEdit;
+    edtForn: TEdit;
+    mkedtDatPagto: TMaskEdit;
+    edtValor: TEdit;
+    edtSitu: TEdit;
+    mkedtDatVecto: TMaskEdit;
+    spdbtConfirmar: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    procedure spdbtConfirmarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fAdicionar: TfAdicionar;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfAdicionar.spdbtConfirmarClick(Sender: TObject);
+begin
+  banco.table1.append;
+  banco.table1.fieldbyname('Codigo').asinteger:=strtoint(edtCod.text);
+  banco.table1.fieldbyname('Produto').asstring:=edtProd.text;
+  banco.table1.fieldbyname('Fornecedor').asstring:=edtForn.text;
+  banco.table1.fieldbyname('DataPG').asstring:=mkedtDatPagto.text;
+  banco.table1.fieldbyname('DataVC').asstring:=mkedtDatVecto.text;
+  banco.table1.fieldbyname('Valor').asstring:=edtValor.text;
+  banco.table1.fieldbyname('Situacao').asstring:=edtSitu.text;
+  banco.table1.post;
+  
+  edtCod.clear;
+  edtProd.clear;
+  edtForn.clear;
+  edtValor.clear;
+  edtSitu.clear;
+  mkedtDatPagto.clear;
+  mkedtDatVecto.clear;
+end;
+
+end.
