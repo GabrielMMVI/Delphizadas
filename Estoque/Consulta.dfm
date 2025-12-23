@@ -11,7 +11,7 @@ object fConsulta: TfConsulta
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -54,6 +54,7 @@ object fConsulta: TfConsulta
     Top = 71
     Width = 912
     Height = 425
+    DataSource = Banco.DataSource1
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

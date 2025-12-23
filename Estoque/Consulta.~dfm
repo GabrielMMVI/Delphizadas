@@ -11,7 +11,7 @@ object fConsulta: TfConsulta
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -34,19 +34,20 @@ object fConsulta: TfConsulta
     Height = 21
     TabOrder = 0
   end
-  object Button1: TButton
-    Left = 782
-    Top = 26
-    Width = 205
-    Height = 23
+  object btBuscar: TButton
+    Left = 794
+    Top = 21
+    Width = 148
+    Height = 35
     Caption = 'Buscar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -32
+    Font.Height = -24
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    OnClick = btBuscarClick
   end
   object DBGrid1: TDBGrid
     Left = 6
@@ -73,6 +74,7 @@ object fConsulta: TfConsulta
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = btAdicionarClick
   end
   object btAlterar: TButton
     Left = 917
@@ -87,9 +89,10 @@ object fConsulta: TfConsulta
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    OnClick = btAlterarClick
   end
   object btExcluir: TButton
-    Left = 917
+    Left = 916
     Top = 157
     Width = 117
     Height = 40
@@ -101,13 +104,14 @@ object fConsulta: TfConsulta
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = btExcluirClick
   end
-  object btAtualizar: TButton
+  object btImprimir: TButton
     Left = 917
-    Top = 201
+    Top = 200
     Width = 117
     Height = 40
-    Caption = 'Atualizar'
+    Caption = 'Imprimir'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
@@ -115,5 +119,21 @@ object fConsulta: TfConsulta
     Font.Style = []
     ParentFont = False
     TabOrder = 6
+    OnClick = btImprimirClick
+  end
+  object btFechar: TButton
+    Left = 917
+    Top = 244
+    Width = 117
+    Height = 40
+    Caption = 'Fechar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+    OnClick = btFecharClick
   end
 end
