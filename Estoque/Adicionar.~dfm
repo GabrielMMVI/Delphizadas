@@ -1,6 +1,6 @@
 object fAdicionar: TfAdicionar
-  Left = 385
-  Top = 119
+  Left = 293
+  Top = 121
   Width = 553
   Height = 483
   Caption = 'Adicionar'
