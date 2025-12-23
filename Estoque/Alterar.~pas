@@ -1,0 +1,85 @@
+unit Alterar;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Buttons, Mask, StdCtrls;
+
+type
+  TfAlterar = class(TForm)
+    Label1: TLabel;
+    edtCod: TEdit;
+    Label2: TLabel;
+    edtProd: TEdit;
+    Label3: TLabel;
+    edtForn: TEdit;
+    Label4: TLabel;
+    mkedtDatPagto: TMaskEdit;
+    Label5: TLabel;
+    mkedtDatVecto: TMaskEdit;
+    Label6: TLabel;
+    edtValor: TEdit;
+    Label7: TLabel;
+    edtSitu: TEdit;
+    spdbtConfirmar: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    procedure spdbtConfirmarClick(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fAlterar: TfAlterar;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfAlterar.spdbtConfirmarClick(Sender: TObject);
+begin
+  banco.table1.edit;
+  banco.table1.fieldbyname('Codigo').asinteger:=strtoint(edtCod.text);
+  banco.table1.fieldbyname('Produto').asstring:=edtProd.text;
+  banco.table1.fieldbyname('Fornecedor').asstring:=edtForn.text;
+  banco.table1.fieldbyname('DataPG').asstring:=mkedtDatPagto.text;
+  banco.table1.fieldbyname('DataVC').asstring:=mkedtDatVecto.text;
+  banco.table1.fieldbyname('Valor').asstring:=edtValor.text;
+  banco.table1.fieldbyname('Situacao').asstring:=edtSitu.text;
+  banco.table1.post;
+
+  edtCod.clear;
+  edtProd.clear;
+  edtForn.clear;
+  edtValor.clear;
+  edtSitu.clear;
+  mkedtDatPagto.clear;
+  mkedtDatVecto.clear;
+
+  edtCod.setfocus;
+end;
+
+procedure TfAlterar.SpeedButton1Click(Sender: TObject);
+begin
+  edtCod.clear;
+  edtProd.clear;
+  edtForn.clear;
+  edtValor.clear;
+  edtSitu.clear;
+  mkedtDatPagto.clear;
+  mkedtDatVecto.clear;
+
+  edtCod.setfocus;
+end;
+
+procedure TfAlterar.SpeedButton2Click(Sender: TObject);
+begin
+  fAlterar.Close;
+end;
+
+end.
